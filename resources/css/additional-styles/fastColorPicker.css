@@ -1,0 +1,56 @@
+.fast-color-picker * {
+    box-sizing: border-box;
+}
+
+.fast-color-picker {
+    display: block;
+}
+
+.color-item {
+    display: inline-block;
+    border: 3px solid #fff;
+    border-radius: 0.4rem;
+    height: 30px;
+    width: 30px;
+    margin: -2px 0;
+    -webkit-transition: -webkit-transform 300ms; /* Safari */
+    transition: transform 300ms;
+}
+
+.color-item:hover {
+    border: 3px solid;
+    cursor: pointer;
+    -webkit-transform: rotate(180deg); /* Safari */
+    transform: rotate(180deg);
+}
+
+.color-selected-div {
+    border-radius: 0.25rem;
+    height: 100%;
+    width: 100%;
+    transition: background-color 0.5s ease, transform 300ms cubic-bezier(0, 0.47, 0.32, 1.97);
+}
+
+.color-selected-div:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.box-style-true {
+    border: 1px solid #e2e8f0;
+    border-radius: 0.25rem;
+    padding: 4px 4px 0 4px;
+    box-shadow: 2px 4px #e2e8f0;
+    margin-top: 2px;
+    position: absolute;
+    background-color: #fff;
+    z-index: 100;
+}
+
+.btn-height-default .color-selected-div {
+    height: 1.2rem;
+}
+
+.box-width-default {
+    width: 100px;
+}

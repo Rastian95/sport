@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\EventController;
+use App\Http\Controllers\TelegramController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -27,5 +29,12 @@ Route::get('/', function () {
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::get('events', [EventController::class, 'index'])->name('events');
+Route::get('events/data', [EventController::class, 'data'])->name('events.data');
+Route::post('events', [EventController::class, 'store'])->name('events.store');
+
+Route::get('telegram/test', [TelegramController::class, 'test'])->name('telegram.test');
+Route::get('telegram/webhook', [TelegramController::class, 'webhook'])->name('telegram.webhook');
 
 require __DIR__.'/auth.php';
