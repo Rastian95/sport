@@ -16,8 +16,9 @@ return new class extends Migration
         Schema::create('events', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->dateTime('start');
-            $table->dateTime('end');
+            $table->foreignId('telegraph_chat_id')->constrained('telegraph_chats');
+            $table->boolean('active');
+            $table->boolean('isNewly');
             $table->timestamps();
             $table->softDeletes();
         });

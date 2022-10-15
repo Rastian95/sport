@@ -21,7 +21,7 @@ return [
      *
      * For reference, see https://defstudio.github.io/telegraph/webhooks/overview
      */
-    'webhook_handler' => DefStudio\Telegraph\Handlers\EmptyWebhookHandler::class,
+    'webhook_handler' => \App\Http\Webhooks\MyWebhookHandler::class,
 
     /*
      * If enabled, Telegraph dumps received
@@ -67,4 +67,20 @@ return [
     'bot' => [
         'default' => 'tekicha_sport_bot',
     ],
+
+    'ids' => [
+        'bots' => [
+            'tekicha_bot' => '5329801120',
+            'tekicha_sport_bot' => '5704695558',
+        ],
+        'chats' => [
+            'sebastian' => '1413405776',
+            'claudia' => '1516584764',
+            'tekicha_spa' => '5736426295',
+        ],
+        'groups' => [
+            'elaguadelavida' => '-728309460',
+            'volleyball' => '-870090894',
+        ],
+    ]
 ];

@@ -1,0 +1,38 @@
+{
+    "update_id": 350214104,
+    "message": {
+        "message_id": 22,
+        "from": {
+            "id": 1413405776,
+            "is_bot": false,
+            "first_name": "Sebastian",
+            "last_name": "Barreiro",
+            "username": "Rastian95",
+            "language_code": "es"
+        },
+        "chat": {
+            "id": -870090894,
+            "title": "Volleyball Tronadora",
+            "type": "group",
+            "all_members_are_administrators": true
+        },
+        "date": 1665807347,
+        "new_chat_participant": {
+            "id": 5736426295,
+            "is_bot": false,
+            "first_name": "Tekicha Spa"
+        },
+        "new_chat_member": {
+            "id": 5736426295,
+            "is_bot": false,
+            "first_name": "Tekicha Spa"
+        },
+        "new_chat_members": [
+            {
+                "id": 5736426295,
+                "is_bot": false,
+                "first_name": "Tekicha Spa"
+            }
+        ]
+    }
+}

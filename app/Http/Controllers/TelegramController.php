@@ -3,8 +3,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Webhooks\CustomWebhookHandler;
-use DefStudio\Telegraph\Facades\Telegraph;
+use App\Http\Webhooks\CustomWebhookHandler;
 use DefStudio\Telegraph\Models\TelegraphBot;
 use DefStudio\Telegraph\Models\TelegraphChat;
 use Illuminate\Http\Request;

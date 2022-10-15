@@ -1,0 +1,847 @@
+{
+    "ok": true,
+    "result": [
+        {
+            "update_id": 350214090,
+            "message": {
+                "message_id": 3,
+                "from": {
+                    "id": 1413405776,
+                    "is_bot": false,
+                    "first_name": "Sebastian",
+                    "last_name": "Barreiro",
+                    "username": "Rastian95",
+                    "language_code": "es"
+                },
+                "chat": {
+                    "id": -870090894,
+                    "title": "Volleyball Tronadora",
+                    "type": "group",
+                    "all_members_are_administrators": true
+                },
+                "date": 1665733092,
+                "new_chat_participant": {
+                    "id": 5704695558,
+                    "is_bot": true,
+                    "first_name": "Volleyball Tronadora",
+                    "username": "tekicha_sport_bot"
+                },
+                "new_chat_member": {
+                    "id": 5704695558,
+                    "is_bot": true,
+                    "first_name": "Volleyball Tronadora",
+                    "username": "tekicha_sport_bot"
+                },
+                "new_chat_members": [
+                    {
+                        "id": 5704695558,
+                        "is_bot": true,
+                        "first_name": "Volleyball Tronadora",
+                        "username": "tekicha_sport_bot"
+                    }
+                ]
+            }
+        },
+        {
+            "update_id": 350214094,
+            "message": {
+                "message_id": 9,
+                "from": {
+                    "id": 1413405776,
+                    "is_bot": false,
+                    "first_name": "Sebastian",
+                    "last_name": "Barreiro",
+                    "username": "Rastian95",
+                    "language_code": "es"
+                },
+                "chat": {
+                    "id": -870090894,
+                    "title": "Volleyball Tronadora",
+                    "type": "group",
+                    "all_members_are_administrators": true
+                },
+                "date": 1665798570,
+                "text": "/nuevo@tekicha_sport_bot",
+                "entities": [
+                    {
+                        "offset": 0,
+                        "length": 24,
+                        "type": "bot_command"
+                    }
+                ]
+            }
+        },
+        {
+            "update_id": 350214095,
+            "message": {
+                "message_id": 10,
+                "from": {
+                    "id": 1413405776,
+                    "is_bot": false,
+                    "first_name": "Sebastian",
+                    "last_name": "Barreiro",
+                    "username": "Rastian95",
+                    "language_code": "es"
+                },
+                "chat": {
+                    "id": -870090894,
+                    "title": "Volleyball Tronadora",
+                    "type": "group",
+                    "all_members_are_administrators": true
+                },
+                "date": 1665798576,
+                "text": "/nuevo@tekicha_sport_bot",
+                "entities": [
+                    {
+                        "offset": 0,
+                        "length": 24,
+                        "type": "bot_command"
+                    }
+                ]
+            }
+        },
+        {
+            "update_id": 350214096,
+            "message": {
+                "message_id": 11,
+                "from": {
+                    "id": 1413405776,
+                    "is_bot": false,
+                    "first_name": "Sebastian",
+                    "last_name": "Barreiro",
+                    "username": "Rastian95",
+                    "language_code": "es"
+                },
+                "chat": {
+                    "id": -870090894,
+                    "title": "Volleyball Tronadora",
+                    "type": "group",
+                    "all_members_are_administrators": true
+                },
+                "date": 1665798585,
+                "text": "/nuevo@tekicha_sport_bot",
+                "entities": [
+                    {
+                        "offset": 0,
+                        "length": 24,
+                        "type": "bot_command"
+                    }
+                ]
+            }
+        },
+        {
+            "update_id": 350214097,
+            "message": {
+                "message_id": 12,
+                "from": {
+                    "id": 1413405776,
+                    "is_bot": false,
+                    "first_name": "Sebastian",
+                    "last_name": "Barreiro",
+                    "username": "Rastian95",
+                    "language_code": "es"
+                },
+                "chat": {
+                    "id": -870090894,
+                    "title": "Volleyball Tronadora",
+                    "type": "group",
+                    "all_members_are_administrators": true
+                },
+                "date": 1665798587,
+                "text": "/nuevo@tekicha_sport_bot",
+                "entities": [
+                    {
+                        "offset": 0,
+                        "length": 24,
+                        "type": "bot_command"
+                    }
+                ]
+            }
+        },
+        {
+            "update_id": 350214098,
+            "message": {
+                "message_id": 14,
+                "from": {
+                    "id": 1413405776,
+                    "is_bot": false,
+                    "first_name": "Sebastian",
+                    "last_name": "Barreiro",
+                    "username": "Rastian95",
+                    "language_code": "es"
+                },
+                "chat": {
+                    "id": -870090894,
+                    "title": "Volleyball Tronadora",
+                    "type": "group",
+                    "all_members_are_administrators": true
+                },
+                "date": 1665798744,
+                "new_chat_participant": {
+                    "id": 5329801120,
+                    "is_bot": true,
+                    "first_name": "El Agua de la Vida",
+                    "username": "tekicha_bot"
+                },
+                "new_chat_member": {
+                    "id": 5329801120,
+                    "is_bot": true,
+                    "first_name": "El Agua de la Vida",
+                    "username": "tekicha_bot"
+                },
+                "new_chat_members": [
+                    {
+                        "id": 5329801120,
+                        "is_bot": true,
+                        "first_name": "El Agua de la Vida",
+                        "username": "tekicha_bot"
+                    }
+                ]
+            }
+        },
+        {
+            "update_id": 350214101,
+            "message": {
+                "message_id": 19,
+                "from": {
+                    "id": 1413405776,
+                    "is_bot": false,
+                    "first_name": "Sebastian",
+                    "last_name": "Barreiro",
+                    "username": "Rastian95",
+                    "language_code": "es"
+                },
+                "chat": {
+                    "id": -870090894,
+                    "title": "Volleyball Tronadora",
+                    "type": "group",
+                    "all_members_are_administrators": true
+                },
+                "date": 1665799119,
+                "left_chat_participant": {
+                    "id": 5329801120,
+                    "is_bot": true,
+                    "first_name": "El Agua de la Vida",
+                    "username": "tekicha_bot"
+                },
+                "left_chat_member": {
+                    "id": 5329801120,
+                    "is_bot": true,
+                    "first_name": "El Agua de la Vida",
+                    "username": "tekicha_bot"
+                }
+            }
+        },
+        {
+            "update_id": 350214102,
+            "message": {
+                "message_id": 20,
+                "from": {
+                    "id": 1413405776,
+                    "is_bot": false,
+                    "first_name": "Sebastian",
+                    "last_name": "Barreiro",
+                    "username": "Rastian95",
+                    "language_code": "es"
+                },
+                "chat": {
+                    "id": -870090894,
+                    "title": "Volleyball Tronadora",
+                    "type": "group",
+                    "all_members_are_administrators": true
+                },
+                "date": 1665799199,
+                "new_chat_participant": {
+                    "id": 1516584764,
+                    "is_bot": false,
+                    "first_name": "Claudia"
+                },
+                "new_chat_member": {
+                    "id": 1516584764,
+                    "is_bot": false,
+                    "first_name": "Claudia"
+                },
+                "new_chat_members": [
+                    {
+                        "id": 1516584764,
+                        "is_bot": false,
+                        "first_name": "Claudia"
+                    }
+                ]
+            }
+        },
+        {
+            "update_id": 350214103,
+            "message": {
+                "message_id": 21,
+                "from": {
+                    "id": 1413405776,
+                    "is_bot": false,
+                    "first_name": "Sebastian",
+                    "last_name": "Barreiro",
+                    "username": "Rastian95",
+                    "language_code": "es"
+                },
+                "chat": {
+                    "id": -870090894,
+                    "title": "Volleyball Tronadora",
+                    "type": "group",
+                    "all_members_are_administrators": true
+                },
+                "date": 1665799224,
+                "left_chat_participant": {
+                    "id": 1516584764,
+                    "is_bot": false,
+                    "first_name": "Claudia"
+                },
+                "left_chat_member": {
+                    "id": 1516584764,
+                    "is_bot": false,
+                    "first_name": "Claudia"
+                }
+            }
+        },
+        {
+            "update_id": 350214104,
+            "message": {
+                "message_id": 22,
+                "from": {
+                    "id": 1413405776,
+                    "is_bot": false,
+                    "first_name": "Sebastian",
+                    "last_name": "Barreiro",
+                    "username": "Rastian95",
+                    "language_code": "es"
+                },
+                "chat": {
+                    "id": -870090894,
+                    "title": "Volleyball Tronadora",
+                    "type": "group",
+                    "all_members_are_administrators": true
+                },
+                "date": 1665807347,
+                "new_chat_participant": {
+                    "id": 5736426295,
+                    "is_bot": false,
+                    "first_name": "Tekicha Spa"
+                },
+                "new_chat_member": {
+                    "id": 5736426295,
+                    "is_bot": false,
+                    "first_name": "Tekicha Spa"
+                },
+                "new_chat_members": [
+                    {
+                        "id": 5736426295,
+                        "is_bot": false,
+                        "first_name": "Tekicha Spa"
+                    }
+                ]
+            }
+        },
+        {
+            "update_id": 350214105,
+            "message": {
+                "message_id": 23,
+                "from": {
+                    "id": 1413405776,
+                    "is_bot": false,
+                    "first_name": "Sebastian",
+                    "last_name": "Barreiro",
+                    "username": "Rastian95",
+                    "language_code": "es"
+                },
+                "chat": {
+                    "id": -870090894,
+                    "title": "Volleyball Tronadora",
+                    "type": "group",
+                    "all_members_are_administrators": true
+                },
+                "date": 1665808040,
+                "text": "/help",
+                "entities": [
+                    {
+                        "offset": 0,
+                        "length": 5,
+                        "type": "bot_command"
+                    }
+                ]
+            }
+        },
+        {
+            "update_id": 350214106,
+            "message": {
+                "message_id": 24,
+                "from": {
+                    "id": 1413405776,
+                    "is_bot": false,
+                    "first_name": "Sebastian",
+                    "last_name": "Barreiro",
+                    "username": "Rastian95",
+                    "language_code": "es"
+                },
+                "chat": {
+                    "id": -870090894,
+                    "title": "Volleyball Tronadora",
+                    "type": "group",
+                    "all_members_are_administrators": true
+                },
+                "date": 1665808081,
+                "text": "/nuevo@tekicha_sport_bot",
+                "entities": [
+                    {
+                        "offset": 0,
+                        "length": 24,
+                        "type": "bot_command"
+                    }
+                ]
+            }
+        },
+        {
+            "update_id": 350214107,
+            "message": {
+                "message_id": 25,
+                "from": {
+                    "id": 1413405776,
+                    "is_bot": false,
+                    "first_name": "Sebastian",
+                    "last_name": "Barreiro",
+                    "username": "Rastian95",
+                    "language_code": "es"
+                },
+                "chat": {
+                    "id": -870090894,
+                    "title": "Volleyball Tronadora",
+                    "type": "group",
+                    "all_members_are_administrators": true
+                },
+                "date": 1665808085,
+                "text": "/nuevo@tekicha_sport_bot",
+                "entities": [
+                    {
+                        "offset": 0,
+                        "length": 24,
+                        "type": "bot_command"
+                    }
+                ]
+            }
+        },
+        {
+            "update_id": 350214108,
+            "my_chat_member": {
+                "chat": {
+                    "id": -870090894,
+                    "title": "Volleyball Tronadora",
+                    "type": "group",
+                    "all_members_are_administrators": true
+                },
+                "from": {
+                    "id": 1413405776,
+                    "is_bot": false,
+                    "first_name": "Sebastian",
+                    "last_name": "Barreiro",
+                    "username": "Rastian95",
+                    "language_code": "es"
+                },
+                "date": 1665808273,
+                "old_chat_member": {
+                    "user": {
+                        "id": 5704695558,
+                        "is_bot": true,
+                        "first_name": "Tekicha Sport Bot",
+                        "username": "tekicha_sport_bot"
+                    },
+                    "status": "member"
+                },
+                "new_chat_member": {
+                    "user": {
+                        "id": 5704695558,
+                        "is_bot": true,
+                        "first_name": "Tekicha Sport Bot",
+                        "username": "tekicha_sport_bot"
+                    },
+                    "status": "administrator",
+                    "can_be_edited": false,
+                    "can_manage_chat": true,
+                    "can_change_info": true,
+                    "can_delete_messages": true,
+                    "can_invite_users": true,
+                    "can_restrict_members": true,
+                    "can_pin_messages": true,
+                    "can_promote_members": false,
+                    "can_manage_video_chats": true,
+                    "is_anonymous": false,
+                    "can_manage_voice_chats": true
+                }
+            }
+        },
+        {
+            "update_id": 350214109,
+            "message": {
+                "message_id": 26,
+                "from": {
+                    "id": 1413405776,
+                    "is_bot": false,
+                    "first_name": "Sebastian",
+                    "last_name": "Barreiro",
+                    "username": "Rastian95",
+                    "language_code": "es"
+                },
+                "chat": {
+                    "id": -870090894,
+                    "title": "Volleyball Tronadora",
+                    "type": "group",
+                    "all_members_are_administrators": true
+                },
+                "date": 1665808354,
+                "new_chat_photo": [
+                    {
+                        "file_id": "AgACAgEAAxkBAAMaY0o34kgEFrJEtmOSfLqdlb_Np88AAgqrMRuWq1BGGRf27Oywv_8BAAMCAANhAAMqBA",
+                        "file_unique_id": "AQADCqsxG5arUEYAAQ",
+                        "file_size": 9151,
+                        "width": 160,
+                        "height": 160
+                    },
+                    {
+                        "file_id": "AgACAgEAAxkBAAMaY0o34kgEFrJEtmOSfLqdlb_Np88AAgqrMRuWq1BGGRf27Oywv_8BAAMCAANiAAMqBA",
+                        "file_unique_id": "AQADCqsxG5arUEZn",
+                        "file_size": 22948,
+                        "width": 320,
+                        "height": 320
+                    },
+                    {
+                        "file_id": "AgACAgEAAxkBAAMaY0o34kgEFrJEtmOSfLqdlb_Np88AAgqrMRuWq1BGGRf27Oywv_8BAAMCAANjAAMqBA",
+                        "file_unique_id": "AQADCqsxG5arUEYB",
+                        "file_size": 43730,
+                        "width": 640,
+                        "height": 640
+                    }
+                ]
+            }
+        },
+        {
+            "update_id": 350214110,
+            "message": {
+                "message_id": 27,
+                "from": {
+                    "id": 1413405776,
+                    "is_bot": false,
+                    "first_name": "Sebastian",
+                    "last_name": "Barreiro",
+                    "username": "Rastian95",
+                    "language_code": "es"
+                },
+                "chat": {
+                    "id": -870090894,
+                    "title": "Volleyball Tronadora",
+                    "type": "group",
+                    "all_members_are_administrators": true
+                },
+                "date": 1665808449,
+                "text": "/nuevo@tekicha_sport_bot",
+                "entities": [
+                    {
+                        "offset": 0,
+                        "length": 24,
+                        "type": "bot_command"
+                    }
+                ]
+            }
+        },
+        {
+            "update_id": 350214111,
+            "message": {
+                "message_id": 28,
+                "from": {
+                    "id": 1413405776,
+                    "is_bot": false,
+                    "first_name": "Sebastian",
+                    "last_name": "Barreiro",
+                    "username": "Rastian95",
+                    "language_code": "es"
+                },
+                "chat": {
+                    "id": -870090894,
+                    "title": "Volleyball Tronadora",
+                    "type": "group",
+                    "all_members_are_administrators": true
+                },
+                "date": 1665808459,
+                "text": "/nuevo",
+                "entities": [
+                    {
+                        "offset": 0,
+                        "length": 6,
+                        "type": "bot_command"
+                    }
+                ]
+            }
+        },
+        {
+            "update_id": 350214112,
+            "my_chat_member": {
+                "chat": {
+                    "id": -870090894,
+                    "title": "Volleyball Tronadora",
+                    "type": "group",
+                    "all_members_are_administrators": true
+                },
+                "from": {
+                    "id": 1413405776,
+                    "is_bot": false,
+                    "first_name": "Sebastian",
+                    "last_name": "Barreiro",
+                    "username": "Rastian95",
+                    "language_code": "es"
+                },
+                "date": 1665808577,
+                "old_chat_member": {
+                    "user": {
+                        "id": 5704695558,
+                        "is_bot": true,
+                        "first_name": "Tekicha Sport Bot",
+                        "username": "tekicha_sport_bot"
+                    },
+                    "status": "administrator",
+                    "can_be_edited": false,
+                    "can_manage_chat": true,
+                    "can_change_info": true,
+                    "can_delete_messages": true,
+                    "can_invite_users": true,
+                    "can_restrict_members": true,
+                    "can_pin_messages": true,
+                    "can_promote_members": false,
+                    "can_manage_video_chats": true,
+                    "is_anonymous": false,
+                    "can_manage_voice_chats": true
+                },
+                "new_chat_member": {
+                    "user": {
+                        "id": 5704695558,
+                        "is_bot": true,
+                        "first_name": "Tekicha Sport Bot",
+                        "username": "tekicha_sport_bot"
+                    },
+                    "status": "left"
+                }
+            }
+        },
+        {
+            "update_id": 350214113,
+            "message": {
+                "message_id": 29,
+                "from": {
+                    "id": 1413405776,
+                    "is_bot": false,
+                    "first_name": "Sebastian",
+                    "last_name": "Barreiro",
+                    "username": "Rastian95",
+                    "language_code": "es"
+                },
+                "chat": {
+                    "id": -870090894,
+                    "title": "Volleyball Tronadora",
+                    "type": "group",
+                    "all_members_are_administrators": true
+                },
+                "date": 1665808577,
+                "left_chat_participant": {
+                    "id": 5704695558,
+                    "is_bot": true,
+                    "first_name": "Tekicha Sport Bot",
+                    "username": "tekicha_sport_bot"
+                },
+                "left_chat_member": {
+                    "id": 5704695558,
+                    "is_bot": true,
+                    "first_name": "Tekicha Sport Bot",
+                    "username": "tekicha_sport_bot"
+                }
+            }
+        },
+        {
+            "update_id": 350214114,
+            "message": {
+                "message_id": 30,
+                "from": {
+                    "id": 1413405776,
+                    "is_bot": false,
+                    "first_name": "Sebastian",
+                    "last_name": "Barreiro",
+                    "username": "Rastian95",
+                    "language_code": "es"
+                },
+                "chat": {
+                    "id": 1413405776,
+                    "first_name": "Sebastian",
+                    "last_name": "Barreiro",
+                    "username": "Rastian95",
+                    "type": "private"
+                },
+                "date": 1665808596,
+                "text": "/nuevo",
+                "entities": [
+                    {
+                        "offset": 0,
+                        "length": 6,
+                        "type": "bot_command"
+                    }
+                ]
+            }
+        },
+        {
+            "update_id": 350214115,
+            "message": {
+                "message_id": 31,
+                "from": {
+                    "id": 1413405776,
+                    "is_bot": false,
+                    "first_name": "Sebastian",
+                    "last_name": "Barreiro",
+                    "username": "Rastian95",
+                    "language_code": "es"
+                },
+                "chat": {
+                    "id": -870090894,
+                    "title": "Volleyball Tronadora",
+                    "type": "group",
+                    "all_members_are_administrators": true
+                },
+                "date": 1665808629,
+                "new_chat_participant": {
+                    "id": 5704695558,
+                    "is_bot": true,
+                    "first_name": "Tekicha Sport Bot",
+                    "username": "tekicha_sport_bot"
+                },
+                "new_chat_member": {
+                    "id": 5704695558,
+                    "is_bot": true,
+                    "first_name": "Tekicha Sport Bot",
+                    "username": "tekicha_sport_bot"
+                },
+                "new_chat_members": [
+                    {
+                        "id": 5704695558,
+                        "is_bot": true,
+                        "first_name": "Tekicha Sport Bot",
+                        "username": "tekicha_sport_bot"
+                    }
+                ]
+            }
+        },
+        {
+            "update_id": 350214116,
+            "my_chat_member": {
+                "chat": {
+                    "id": -870090894,
+                    "title": "Volleyball Tronadora",
+                    "type": "group",
+                    "all_members_are_administrators": true
+                },
+                "from": {
+                    "id": 1413405776,
+                    "is_bot": false,
+                    "first_name": "Sebastian",
+                    "last_name": "Barreiro",
+                    "username": "Rastian95",
+                    "language_code": "es"
+                },
+                "date": 1665808629,
+                "old_chat_member": {
+                    "user": {
+                        "id": 5704695558,
+                        "is_bot": true,
+                        "first_name": "Tekicha Sport Bot",
+                        "username": "tekicha_sport_bot"
+                    },
+                    "status": "left"
+                },
+                "new_chat_member": {
+                    "user": {
+                        "id": 5704695558,
+                        "is_bot": true,
+                        "first_name": "Tekicha Sport Bot",
+                        "username": "tekicha_sport_bot"
+                    },
+                    "status": "member"
+                }
+            }
+        },
+        {
+            "update_id": 350214117,
+            "message": {
+                "message_id": 32,
+                "from": {
+                    "id": 5736426295,
+                    "is_bot": false,
+                    "first_name": "Tekicha Spa"
+                },
+                "chat": {
+                    "id": -870090894,
+                    "title": "Volleyball Tronadora",
+                    "type": "group",
+                    "all_members_are_administrators": true
+                },
+                "date": 1665808688,
+                "text": "/nuevo",
+                "entities": [
+                    {
+                        "offset": 0,
+                        "length": 6,
+                        "type": "bot_command"
+                    }
+                ]
+            }
+        },
+        {
+            "update_id": 350214118,
+            "my_chat_member": {
+                "chat": {
+                    "id": -870090894,
+                    "title": "Volleyball Tronadora",
+                    "type": "group",
+                    "all_members_are_administrators": true
+                },
+                "from": {
+                    "id": 1413405776,
+                    "is_bot": false,
+                    "first_name": "Sebastian",
+                    "last_name": "Barreiro",
+                    "username": "Rastian95",
+                    "language_code": "es"
+                },
+                "date": 1665808738,
+                "old_chat_member": {
+                    "user": {
+                        "id": 5704695558,
+                        "is_bot": true,
+                        "first_name": "Tekicha Sport Bot",
+                        "username": "tekicha_sport_bot"
+                    },
+                    "status": "member"
+                },
+                "new_chat_member": {
+                    "user": {
+                        "id": 5704695558,
+                        "is_bot": true,
+                        "first_name": "Tekicha Sport Bot",
+                        "username": "tekicha_sport_bot"
+                    },
+                    "status": "administrator",
+                    "can_be_edited": false,
+                    "can_manage_chat": true,
+                    "can_change_info": true,
+                    "can_delete_messages": true,
+                    "can_invite_users": true,
+                    "can_restrict_members": true,
+                    "can_pin_messages": true,
+                    "can_promote_members": false,
+                    "can_manage_video_chats": true,
+                    "is_anonymous": false,
+                    "can_manage_voice_chats": true
+                }
+            }
+        }
+    ]
+}

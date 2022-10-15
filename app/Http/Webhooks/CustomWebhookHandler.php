@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Webhooks;
+namespace App\Http\Webhooks;
 
 use DefStudio\Telegraph\DTO\User;
 use DefStudio\Telegraph\Handlers\WebhookHandler;
