@@ -37,6 +37,8 @@ class MyWebhookHandler extends WebhookHandler
         $this->chat->markdown("*Hola* $name, que bueno verte por aquí!")->send();
     }
 
+
+
     protected function handleChatMemberJoined(User $member): void
     {
         $this->chat->html("Bienvenido {$member->firstName()}")->send();
@@ -45,5 +47,18 @@ class MyWebhookHandler extends WebhookHandler
     protected function handleUnknownCommand(\Illuminate\Support\Stringable $text): void
     {
         $this->chat->html("I can't understand your command: $text")->send();
+    }
+
+    protected function handleChatMessage($text): void
+    {
+        if ($text === 'mensaje') {
+            $this->handleMensaje($text);
+            return;
+        }
+    }
+
+    protected function handleMensaje(\Illuminate\Support\Stringable $text): void
+    {
+        $this->chat->html("Esto es un mensaje: $text")->send();
     }
 }
