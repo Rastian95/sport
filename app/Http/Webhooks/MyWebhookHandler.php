@@ -24,9 +24,15 @@ class MyWebhookHandler extends WebhookHandler
         }
     }
 
-    public function hi(string $userName)
+    public function participo(): void
     {
-        $this->chat->markdown("*Hi* $userName, happy to be here!")->send();
+        $name = $this->message->from()->firstName();
+        $this->chat->message("OK. Que bueno que participes $name")->send();
+    }
+
+    public function hola(string $userName)
+    {
+        $this->chat->markdown("*Hola* $userName, que bueno verte por aquí!")->send();
     }
 
     protected function handleChatMemberJoined(User $member): void
