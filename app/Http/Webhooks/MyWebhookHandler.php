@@ -8,7 +8,8 @@ use DefStudio\Telegraph\Handlers\WebhookHandler;
 
 class MyWebhookHandler extends WebhookHandler
 {
-    protected function nuevo(User $member): void
+
+    public function nuevo(User $member): void
     {
         $event = Event::create([
             'title' => '',
@@ -23,8 +24,22 @@ class MyWebhookHandler extends WebhookHandler
         }
     }
 
+    public function hi(string $userName)
+    {
+        $this->chat->markdown("*Hi* $userName, happy to be here!")->send();
+    }
+
     protected function handleChatMemberJoined(User $member): void
     {
         $this->chat->html("Bienvenido {$member->firstName()}")->send();
+    }
+
+    protected function handleUnknownCommand(\Illuminate\Support\Stringable $text): void
+    {
+        if (!self::$handleUnknownCommands) {
+            parent::handleUnknownCommand($text);
+        }
+
+        $this->chat->html("I can't understand your command: $text")->send();
     }
 }
