@@ -67,13 +67,13 @@
 </template>
 
 <script>
-import EditMenu from '../../components/DropdownEditMenu.vue'
+import EditMenu from '../../Components/DropdownEditMenu.vue'
 
 export default {
   name: 'UsersTilesCard',
   props: ['item'],
   components: {
     EditMenu,
-  },  
+  },
 }
 </script>

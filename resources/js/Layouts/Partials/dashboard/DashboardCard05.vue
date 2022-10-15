@@ -14,7 +14,7 @@
 
 <script>
 import { ref, computed, onMounted, onUnmounted, watch } from 'vue'
-import Tooltip from '../../components/Tooltip.vue'
+import Tooltip from '../../Components/Tooltip.vue'
 import RealtimeChart from '../../charts/RealtimeChart.vue'
 
 // Import utilities
@@ -31,7 +31,7 @@ export default {
     // IMPORTANT:
     // Code below is for demo purpose only, and it's not covered by support.
     // If you need to replace dummy data with real data,
-    // refer to Chart.js documentation: https://www.chartjs.org/docs/latest    
+    // refer to Chart.js documentation: https://www.chartjs.org/docs/latest
 
     const counter = ref(0)
     const range = ref(35)
@@ -45,7 +45,7 @@ export default {
       50.91, 58.52, 53.37, 57.58, 59.09, 59.36, 58.71, 59.42, 55.93, 57.71,
       50.62, 56.28, 57.37, 53.08, 55.94, 55.82, 53.94, 52.65, 50.25,
     ]
-    
+
     const slicedData = ref(sampleData.slice(0, range.value))
 
     // Generate fake dates from now to back in time
@@ -57,7 +57,7 @@ export default {
       })
       return dates
     }
-    
+
     const slicedLabels = ref(generateDates().slice(0, range.value).reverse())
 
     // Fake update every 2 seconds
@@ -78,7 +78,7 @@ export default {
         range.value = 0;
       }
       slicedData.value.shift();
-      slicedData.value.push(sampleData[range.value]);      
+      slicedData.value.push(sampleData[range.value]);
       slicedLabels.value.shift()
       slicedLabels.value.push(new Date())
     })
@@ -110,7 +110,7 @@ export default {
       slicedLabels,
       interval,
       chartData,
-    }  
-  }  
+    }
+  }
 }
 </script>

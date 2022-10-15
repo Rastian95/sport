@@ -35,7 +35,7 @@
 import { ref } from 'vue'
 import LineChart from '../../charts/LineChart01.vue'
 import Icon from '../../images/icon-02.svg'
-import EditMenu from '../../components/DropdownEditMenu.vue'
+import EditMenu from '../../Components/DropdownEditMenu.vue'
 
 // Import utilities
 import { tailwindConfig, hexToRGB } from '../../utils/Utils'
@@ -99,7 +99,7 @@ export default {
 
     return {
       chartData,
-    } 
+    }
   }
 }
 </script>

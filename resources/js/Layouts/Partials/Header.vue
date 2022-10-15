@@ -50,10 +50,10 @@
 <script>
 import { ref } from 'vue'
 
-import SearchModal from '../components/ModalSearch.vue'
-import Notifications from '../components/DropdownNotifications.vue'
-import Help from '../components/DropdownHelp.vue'
-import UserMenu from '../components/DropdownProfile.vue'
+import SearchModal from '../Components/ModalSearch.vue'
+import Notifications from '../Components/DropdownNotifications.vue'
+import Help from '../Components/DropdownHelp.vue'
+import UserMenu from '../Components/DropdownProfile.vue'
 
 export default {
   name: 'Header',

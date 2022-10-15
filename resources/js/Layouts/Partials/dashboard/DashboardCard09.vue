@@ -17,12 +17,12 @@
       <!-- Change the height attribute to adjust the chart height -->
       <BarChart :data="chartData" width="595" height="248" />
     </div>
-  </div>  
+  </div>
 </template>
 
 <script>
 import { ref } from 'vue'
-import Tooltip from '../../components/Tooltip.vue'
+import Tooltip from '../../Components/Tooltip.vue'
 import BarChart from '../../charts/BarChart02.vue'
 
 // Import utilities
@@ -68,7 +68,7 @@ export default {
 
     return {
       chartData,
-    } 
+    }
   }
 }
 </script>
