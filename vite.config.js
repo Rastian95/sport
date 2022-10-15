@@ -20,7 +20,6 @@ export default defineConfig({
     ],
     resolve: {
         alias: {
-            '@': path.resolve(__dirname, 'resources'),
             'ziggy': path.resolve(__dirname, 'vendor/tightenco/ziggy/dist/vue.m')
         },
     },
