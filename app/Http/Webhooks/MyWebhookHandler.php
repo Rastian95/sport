@@ -8,7 +8,7 @@ use DefStudio\Telegraph\Handlers\WebhookHandler;
 
 class MyWebhookHandler extends WebhookHandler
 {
-    protected function nueva(User $member): void
+    protected function nuevo(User $member): void
     {
         $event = Event::create([
             'title' => '',
