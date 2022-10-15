@@ -22,7 +22,7 @@ class TelegraphChatSeeder extends Seeder
             'telegraph_bot_id' => 1
         ]);
         $chat2 = TelegraphChat::create([
-            'chat_id' => -870090894,
+            'chat_id' => -661460749,
             'name' => 'Volleyball Tronadora',
             'telegraph_bot_id' => 1
         ]);
