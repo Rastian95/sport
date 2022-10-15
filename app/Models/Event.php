@@ -13,7 +13,8 @@ class Event extends Model
 
     protected $fillable = [
         'title',
-        'telegraph_chat_id',
+        'owner_chat_id',
+        'creator_chat_id',
         'active',
         'isNewly'
     ];

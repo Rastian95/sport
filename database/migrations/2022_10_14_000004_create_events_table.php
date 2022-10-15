@@ -16,7 +16,8 @@ return new class extends Migration
         Schema::create('events', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->foreignId('telegraph_chat_id')->constrained('telegraph_chats');
+            $table->string('owner_chat_id');
+            $table->string('creator_chat_id');
             $table->boolean('active');
             $table->boolean('isNewly');
             $table->timestamps();
