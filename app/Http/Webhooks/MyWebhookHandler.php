@@ -13,7 +13,7 @@ class MyWebhookHandler extends WebhookHandler
     {
         $event = Event::create([
             'title' => '',
-            'owner_chat_id' => $this->message->chat()->id(),
+            'owner_chat_id' => $this->chat->id,
             'creator_chat_id' => $this->message->from()->id(),
             'isNewly' => true,
         ]);

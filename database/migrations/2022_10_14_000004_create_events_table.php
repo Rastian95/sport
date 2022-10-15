@@ -16,8 +16,8 @@ return new class extends Migration
         Schema::create('events', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->string('owner_chat_id');
-            $table->string('creator_chat_id');
+            $table->string('owner_chat_id')->nullable();
+            $table->string('creator_chat_id')->nullable();
             $table->boolean('active');
             $table->boolean('isNewly');
             $table->timestamps();
