@@ -9,11 +9,11 @@ use DefStudio\Telegraph\Handlers\WebhookHandler;
 class MyWebhookHandler extends WebhookHandler
 {
 
-    public function nuevo(User $member): void
+    public function nuevo(): void
     {
         $event = Event::create([
             'title' => '',
-            'telegraph_chat_id' => $member->id(),
+            'telegraph_chat_id' =>$this->message->from()->id(),
             'active' => false,
             'isNewly' => true,
         ]);
