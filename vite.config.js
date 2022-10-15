@@ -24,4 +24,9 @@ export default defineConfig({
             'ziggy': path.resolve(__dirname, 'vendor/tightenco/ziggy/dist/vue.m')
         },
     },
+    build: {
+        rollupOptions: {
+            external: 'ziggy',
+        }
+    }
 });
