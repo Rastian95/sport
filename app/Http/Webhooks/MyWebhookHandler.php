@@ -15,6 +15,7 @@ class MyWebhookHandler extends WebhookHandler
             'title' => '',
             'owner_chat_id' => $this->chat->id,
             'creator_chat_id' => $this->message->from()->id(),
+            'active' => false,
             'isNewly' => true,
         ]);
         if ($event->wasRecentlyCreated === true) {
