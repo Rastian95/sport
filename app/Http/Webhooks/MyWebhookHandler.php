@@ -43,10 +43,6 @@ class MyWebhookHandler extends WebhookHandler
 
     protected function handleUnknownCommand(\Illuminate\Support\Stringable $text): void
     {
-        if (!self::$handleUnknownCommands) {
-            parent::handleUnknownCommand($text);
-        }
-
         $this->chat->html("I can't understand your command: $text")->send();
     }
 }
