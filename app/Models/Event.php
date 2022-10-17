@@ -15,8 +15,8 @@ class Event extends Model
         'title',
         'owner_chat_id',
         'creator_chat_id',
+        'message_id',
         'active',
-        'isNewly'
     ];
 
     public function details()

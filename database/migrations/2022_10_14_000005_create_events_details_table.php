@@ -19,7 +19,7 @@ return new class extends Migration
             $table->foreignId('player_id')->constrained('players');
             $table->string('name');
             $table->smallInteger('rating');
-            $table->boolean('active');
+            $table->boolean('active')->default(true);
             $table->timestamps();
             $table->softDeletes();
         });

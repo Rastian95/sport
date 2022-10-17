@@ -4,49 +4,100 @@ namespace App\Http\Webhooks;
 
 use App\Libraries\PrettyTable;
 use App\Models\Event;
+use App\Models\Player;
 use DefStudio\Telegraph\DTO\User;
 use DefStudio\Telegraph\Handlers\WebhookHandler;
-use Illuminate\Support\Facades\Log;
 
 class MyWebhookHandler extends WebhookHandler
 {
 
     public function nuevo(string $title): void
     {
-        $event = Event::create([
+        $last_event = Event::latest('created_at')->first();
+        if($last_event->active) {
+            $this->chat->message('Ya hay un partido activo, puede editar el título con el comando "/edit"')->send();
+            return;
+        }
+        $table = new PrettyTable();
+        $table->add_row("$title");
+        $this->chat->message('¡Partido Creado!')->send();
+        $message =  $this->chat->message($table->print())->send();
+        $messageID = $message->telegraphMessageId();
+        $this->chat->pinMessage($messageID)->send();
+        Event::create([
             'title' => $title,
             'owner_chat_id' => $this->chat->id,
             'creator_chat_id' => $this->message->from()->id(),
-            'active' => false,
-            'isNewly' => true,
+            'message_id' => $messageID,
         ]);
 
-        $table = new PrettyTable();
-        $table->add_row("Partido {$event['title']}");
+    }
 
-        if ($event->wasRecentlyCreated === true) {
-            $this->chat->message('Partido Creado')->send();
-            $message =  $this->chat->message($table->print())->send();
-            $messageID = $message->telegraphMessageId();
-            Log::debug("Telegraph message id $messageID", );
-        } else {
-            $this->chat->message('Hubo un error en la creación del partido, intente más tarde')->send();
+    public function editar(string $title): void
+    {
+        $last_event = Event::latest('created_at')->first();
+        if(!$last_event->active) {
+            $this->chat->message('No hay un partido activo, puede crear uno con el comando "/nuevo"')->send();
+            return;
         }
+        $table = new PrettyTable();
+        $table->add_row("$title");
+        $this->chat->message('¡Partido Editado!')->send();
+        $this->chat->edit($last_event->message_id)->message($table->print())->send();
+        $last_event::update([
+            'title' => $title,
+        ]);
+
     }
 
     public function participo(): void
     {
+        $last_event = Event::latest('created_at')->with('details')->first();
+        if(!$last_event->active) {
+            $this->chat->message('No hay un partido activo, puede crear uno con el comando "/nuevo"')->send();
+            return;
+        }
         $name = $this->message->from()->firstName();
+        $player = Player::firstOrCreate([
+            ['chat_id' => $this->message->from()->id()],
+            ['name' => $name, 'rating' => '6']
+        ]);
+        $last_event->details()->create([
+            'player_id' => $player->id,
+            'name' => $player->name,
+            'rating' => $player->rating,
+        ]);
+        $table = new PrettyTable();
+        $table->add_row($last_event->title);
+        $table->add_new_line();
+        foreach ($last_event->details as $key => $player) {
+            $number = $key + 1;
+            $row = "$number. $player->name";
+            $table->add_row($row);
+        }
+
         $this->chat->message("OK. Que bueno que participes $name")->send();
+        $this->chat->edit($last_event->message_id)->message($table->print())->send();
     }
 
-    public function hola()
+    public function yo(): void
     {
-        $name = $this->message->from()->firstName();
-        $this->chat->markdown("*Hola* $name, que bueno verte por aquí!")->send();
+        $this->participo();
     }
 
-
+    public function terminar(): void
+    {
+        $last_event = Event::latest('created_at')->first();
+        if(!$last_event->active) {
+            $this->chat->message('No hay un partido activo, puede crear uno con el comando "/nuevo"')->send();
+            return;
+        }
+        $last_event::update([
+            'active' => false,
+        ]);
+        $this->chat->message('¡Partido Terminado, espero que la hayan pasado bien!')->send();
+        $this->chat->unpinMessage($last_event->message_id)->send();
+    }
 
     protected function handleChatMemberJoined(User $member): void
     {
@@ -55,19 +106,6 @@ class MyWebhookHandler extends WebhookHandler
 
     protected function handleUnknownCommand(\Illuminate\Support\Stringable $text): void
     {
-        $this->chat->html("I can't understand your command: $text")->send();
-    }
-
-    protected function handleChatMessage($text): void
-    {
-        if ($text === 'mensaje') {
-            $this->handleMensaje($text);
-            return;
-        }
-    }
-
-    protected function handleMensaje($text): void
-    {
-        $this->chat->html("Esto es un mensaje: $text")->send();
+        $this->chat->html("No puedo entender su comando: $text")->send();
     }
 }

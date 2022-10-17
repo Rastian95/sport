@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('chat_id');
             $table->string('name');
             $table->smallInteger('rating');
-            $table->boolean('active');
+            $table->boolean('active')->default(true);
             $table->timestamps();
             $table->softDeletes();
         });

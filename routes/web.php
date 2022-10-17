@@ -44,14 +44,20 @@ Route::get('table', function () {
     $table = new PrettyTable();
     $table->add_row("Partido {$event['title']}");
     $table->add_new_line();
-//    foreach ($event['details'] as $key => $player) {
-//        $number = $key + 1;
-//        $row = "$number. {$player['name']}";
-//        $table->add_row($row);
-//    }
+    foreach ($event['details'] as $key => $player) {
+        $number = $key + 1;
+        $row = "$number. {$player['name']}";
+        $table->add_row($row);
+    }
 
-    $chat = TelegraphChat::find(1);
-    $chat->message($table->print())->send();
+//    $chat = TelegraphChat::find(1);
+//    $chat->message($table->print())->send();
+
+    $chat = TelegraphChat::where('chat_id', '=', '1413405776')->first();
+    $chat->edit(156)->message($table->print())->send();
+
+    $chat = TelegraphChat::where('chat_id', '=', '1413405776')->first();
+    $chat->pinMessage(156)->send();
 
     echo "<pre>". $table->print() ."</pre>";
 

@@ -18,8 +18,8 @@ return new class extends Migration
             $table->string('title');
             $table->string('owner_chat_id')->nullable();
             $table->string('creator_chat_id')->nullable();
-            $table->boolean('active');
-            $table->boolean('isNewly');
+            $table->string('message_id')->nullable();
+            $table->boolean('active')->default(true);
             $table->timestamps();
             $table->softDeletes();
         });

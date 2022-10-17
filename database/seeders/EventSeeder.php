@@ -21,8 +21,8 @@ class EventSeeder extends Seeder
                 'title' => 'Jueves 8PM',
                 'owner_chat_id' => '-870090894',
                 'creator_chat_id' => '1413405776',
-                'active' => 1,
-                'isNewly' => 0,
+                'message_id' => '153',
+                'active' => 0,
             ]
         );
 
