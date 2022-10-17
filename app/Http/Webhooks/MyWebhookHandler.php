@@ -4,6 +4,7 @@ namespace App\Http\Webhooks;
 
 use App\Libraries\PrettyTable;
 use App\Models\Event;
+use App\Models\EventDetail;
 use App\Models\Player;
 use DefStudio\Telegraph\DTO\User;
 use DefStudio\Telegraph\Handlers\WebhookHandler;
@@ -39,13 +40,19 @@ class MyWebhookHandler extends WebhookHandler
 
     public function editar(string $title): void
     {
-        $last_event = Event::latest('created_at')->first();
+        $last_event = Event::latest('created_at')->with('details')->first();
         if(!$last_event->active) {
             $this->chat->message('No hay un partido activo, puede crear uno con el comando "/nuevo"')->send();
             return;
         }
         $table = new PrettyTable();
         $table->add_row("$title");
+        $table->add_new_line();
+        foreach ($last_event->details as $key => $player) {
+            $number = $key + 1;
+            $row = "$number. $player->name";
+            $table->add_row($row);
+        }
         $this->chat->message('¡Partido Editado!')->send();
         $this->chat->edit($last_event->message_id)->message($table->print())->send();
         $last_event->update([
@@ -66,8 +73,13 @@ class MyWebhookHandler extends WebhookHandler
             ['chat_id' => $this->message->from()->id()],
             ['name' => $name, 'rating' => '6']
         );
+        $player_id = $player->id;
+        if (EventDetail::where('player_id', '=', $player_id)->exists()) {
+            $this->chat->message('Ya estás participando')->send();
+            return;
+        }
         $last_event->details()->create([
-            'player_id' => $player->id,
+            'player_id' => $player_id,
             'name' => $player->name,
             'rating' => $player->rating,
         ]);
