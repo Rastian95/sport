@@ -13,6 +13,10 @@ class MyWebhookHandler extends WebhookHandler
 
     public function nuevo(string $title): void
     {
+        if($title == '') {
+            $this->chat->message('Necesitas ingresar el título')->send();
+            return;
+        }
         $last_event = Event::latest('created_at')->first();
         if($last_event->active) {
             $this->chat->message('Ya hay un partido activo, puede editar el título con el comando "/edit"')->send();
