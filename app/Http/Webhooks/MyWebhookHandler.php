@@ -63,7 +63,7 @@ class MyWebhookHandler extends WebhookHandler
 
     public function participo(): void
     {
-        $last_event = Event::latest('created_at')->with('details')->first();
+        $last_event = Event::latest('created_at')->first();
         if(!$last_event->active) {
             $this->chat->message('No hay un partido activo, puede crear uno con el comando "/nuevo"')->send();
             return;
@@ -83,6 +83,7 @@ class MyWebhookHandler extends WebhookHandler
             'name' => $player->name,
             'rating' => $player->rating,
         ]);
+        $last_event = Event::latest('created_at')->with('details')->first();
         $table = new PrettyTable();
         $table->add_row($last_event->title);
         $table->add_new_line();
