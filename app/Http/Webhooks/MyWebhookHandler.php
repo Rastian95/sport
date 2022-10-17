@@ -48,7 +48,7 @@ class MyWebhookHandler extends WebhookHandler
         $table->add_row("$title");
         $this->chat->message('¡Partido Editado!')->send();
         $this->chat->edit($last_event->message_id)->message($table->print())->send();
-        $last_event::update([
+        $last_event->update([
             'title' => $title,
         ]);
 
@@ -96,7 +96,7 @@ class MyWebhookHandler extends WebhookHandler
             $this->chat->message('No hay un partido activo, puede crear uno con el comando "/nuevo"')->send();
             return;
         }
-        $last_event::update([
+        $last_event->update([
             'active' => false,
         ]);
         $this->chat->message('¡Partido Terminado, espero que la hayan pasado bien!')->send();
