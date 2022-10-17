@@ -28,13 +28,16 @@ class MyWebhookHandler extends WebhookHandler
         $this->chat->message('¡Partido Creado!')->send();
         $message =  $this->chat->message($table->print())->send();
         $messageID = $message->telegraphMessageId();
-        $this->chat->pinMessage($messageID)->send();
-        Event::create([
-            'title' => $title,
-            'owner_chat_id' => $this->chat->id,
-            'creator_chat_id' => $this->message->from()->id(),
-            'message_id' => $messageID,
-        ]);
+        if($messageID) {
+            $this->chat->pinMessage($messageID)->send();
+            Event::create([
+                'title' => $title,
+                'owner_chat_id' => $this->chat->id,
+                'creator_chat_id' => $this->message->from()->id(),
+                'message_id' => $messageID,
+            ]);
+        }
+
 
     }
 
@@ -122,7 +125,7 @@ class MyWebhookHandler extends WebhookHandler
 
     protected function handleChatMemberJoined(User $member): void
     {
-        $this->chat->html("Bienvenido {$member->firstName()}")->send();
+        $this->chat->html("Bienvenido/a {$member->firstName()}")->send();
     }
 
     protected function handleUnknownCommand(\Illuminate\Support\Stringable $text): void
