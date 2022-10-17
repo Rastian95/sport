@@ -18,4 +18,10 @@ class Event extends Model
         'active',
         'isNewly'
     ];
+
+    public function details()
+    {
+        return $this->hasMany(EventDetail::class);
+    }
+
 }

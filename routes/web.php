@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\TelegramController;
+use App\Libraries\PrettyTable;
+use DefStudio\Telegraph\Models\TelegraphChat;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -36,5 +38,23 @@ Route::post('events', [EventController::class, 'store'])->name('events.store');
 
 Route::get('telegram/test', [TelegramController::class, 'test'])->name('telegram.test');
 Route::get('telegram/webhook', [TelegramController::class, 'webhook'])->name('telegram.webhook');
+Route::get('table', function () {
+    $event = \App\Models\Event::find(1)->with('details')->first()->toArray();
+
+    $table = new PrettyTable();
+    $table->add_row("Partido {$event['title']}");
+    $table->add_new_line();
+//    foreach ($event['details'] as $key => $player) {
+//        $number = $key + 1;
+//        $row = "$number. {$player['name']}";
+//        $table->add_row($row);
+//    }
+
+    $chat = TelegraphChat::find(1);
+    $chat->message($table->print())->send();
+
+    echo "<pre>". $table->print() ."</pre>";
+
+});
 
 require __DIR__.'/auth.php';
