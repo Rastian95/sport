@@ -14,13 +14,13 @@ class MyWebhookHandler extends WebhookHandler
 
     public function nuevo(string $title): void
     {
-        if($title == '') {
-            $this->chat->message('Necesitas ingresar el título')->send();
+        if(!$title) {
+            $this->chat->message('Necesitas ingresar un título')->send();
             return;
         }
         $last_event = Event::latest('created_at')->first();
         if($last_event->active) {
-            $this->chat->message('Ya hay un partido activo, puede editar el título con el comando "/edit"')->send();
+            $this->chat->message('Ya hay un partido activo, puede editar el título con el comando "/editar"')->send();
             return;
         }
         $table = new PrettyTable();
@@ -40,6 +40,10 @@ class MyWebhookHandler extends WebhookHandler
 
     public function editar(string $title): void
     {
+        if(!$title) {
+            $this->chat->message('Necesitas ingresar un título')->send();
+            return;
+        }
         $last_event = Event::latest('created_at')->with('details')->first();
         if(!$last_event->active) {
             $this->chat->message('No hay un partido activo, puede crear uno con el comando "/nuevo"')->send();
