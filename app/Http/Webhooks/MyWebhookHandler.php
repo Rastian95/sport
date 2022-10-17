@@ -12,9 +12,9 @@ use DefStudio\Telegraph\Handlers\WebhookHandler;
 class MyWebhookHandler extends WebhookHandler
 {
 
-    public function nuevo(string $title = ''): void
+    public function nuevo(string $title): void
     {
-        if($title == '') {
+        if($title == '/nuevo') {
             $this->chat->message('Necesitas ingresar un título')->send();
             return;
         }
@@ -40,7 +40,7 @@ class MyWebhookHandler extends WebhookHandler
 
     public function editar(string $title = ''): void
     {
-        if($title == '') {
+        if($title == '/editar') {
             $this->chat->message('Necesitas ingresar un título')->send();
             return;
         }
