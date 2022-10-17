@@ -74,7 +74,7 @@ class MyWebhookHandler extends WebhookHandler
             ['name' => $name, 'rating' => '6']
         );
         $player_id = $player->id;
-        if (EventDetail::where('player_id', '=', $player_id)->exists()) {
+        if ($last_event->details()->where('player_id', '=', $player_id)->exists()) {
             $this->chat->message('Ya estás participando')->send();
             return;
         }
