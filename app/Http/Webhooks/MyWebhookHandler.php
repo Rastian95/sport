@@ -62,10 +62,10 @@ class MyWebhookHandler extends WebhookHandler
             return;
         }
         $name = $this->message->from()->firstName();
-        $player = Player::firstOrCreate([
+        $player = Player::firstOrCreate(
             ['chat_id' => $this->message->from()->id()],
             ['name' => $name, 'rating' => '6']
-        ]);
+        );
         $last_event->details()->create([
             'player_id' => $player->id,
             'name' => $player->name,
