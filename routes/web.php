@@ -63,4 +63,12 @@ Route::get('table', function () {
 
 });
 
+Route::get('pdfToImage', function () {
+    $pdfPath = 'invoice.pdf';
+    $imagick = new imagick();
+    $imagick->readImage($pdfPath);
+    $imagick->setImageFormat("jpg");
+    $imagick->writeImage('thumb.jpg');
+});
+
 require __DIR__.'/auth.php';

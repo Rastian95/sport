@@ -4,7 +4,6 @@ namespace App\Http\Webhooks;
 
 use App\Libraries\PrettyTable;
 use App\Models\Event;
-use App\Models\EventDetail;
 use App\Models\Player;
 use DefStudio\Telegraph\DTO\User;
 use DefStudio\Telegraph\Handlers\WebhookHandler;
