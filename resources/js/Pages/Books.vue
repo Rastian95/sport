@@ -2,10 +2,10 @@
     <app-layout title="Books">
         <div class="py-12">
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-                <Calendar @dateClick="dateClick" />
+                <Calendar @dateClick="dateClick"/>
             </div>
         </div>
-        <calendar-modal :show="showModal" :form="newEvent" @closeModal="closeModal"  @store="store" />
+        <calendar-modal :show="showModal" :form="newEvent" @closeModal="closeModal" @store="store"/>
     </app-layout>
 </template>
 <script >
